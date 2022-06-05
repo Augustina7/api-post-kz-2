@@ -1,0 +1,195 @@
+<!------------------- 
+
+Project: API.POST.KZ
+
+ ------------------>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="API сервисы" />
+    <meta name="keywords" content="HTML, CSS, API, post.kz" />
+    <title>Desktop</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:regular&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!------------------- HEADER ---------------------->
+
+    <header>
+        <div class="header">
+            <div class="header-column-1">
+                <a href="#">
+                    <img src="img/logo.svg" alt="Логотип" />
+                </a>
+            </div>
+            <div class="header-column-2">
+                <a href="#">REST</a>
+            </div>
+            <div class="header-column-3">
+                <ul>
+                    <li>
+                        <a href="#">API</a>
+                    </li>
+                    <li>
+                        <a href="#" class="column-3-white-text">Документация</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-column-4">
+                <img src="img/user_avatar.svg" alt="Иконка аватара пользователя" />
+                <p>User</p>
+            </div>
+            <div class="header-column-5">
+                <a href="#">
+                    <img src="img/sign-out.svg" alt="Иконка выхода">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!------------------- PAGE ---------------------->
+
+    <div class="page">
+
+        <!------------------- ASIDE ---------------------->
+
+        <aside>
+            <div class="aside">
+                <div class="aside-content">
+                    <div class="aside-content-title">
+                        <h1>API Сервисы</h1>
+                    </div>
+                    <div class="aside-nav-menu">
+                        <ul>
+                            <li>
+                                <a href="#object-type" class="aside-nav-menu-bold">
+                                    Типы объектов
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#object-search" class="aside-nav-menu-text">
+                                    Поиск объектов
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="aside-nav-menu-text">
+                                    Поиск строений
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="aside-nav-menu-text">
+                                    Поиск по адресу
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="aside-nav-menu-text">
+                                    Поиск по почтовому индексу
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="aside-nav-menu-text">
+                                    Поиск строений по почтовому (цифровому) индексу отделения
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="aside-nav-menu-bold">
+                                    QR code
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#object-type" class="aside-nav-menu-text">
+                                    Поиск (выгрузка) по региону (фиксированное количество столбцов)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="aside-download-section">
+                    <div class="download-section-content">
+                        <button>
+                            <span>Скачать инструкцию</span>
+                        </button>
+                        <p>Инструкция для новых почтовых индексов и адресных данных</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <!------------------- SECTION MAIN ---------------------->
+
+
+        <section class="main">
+            <div class="main-content">
+                <!------------------- OBJECT-TYPE ---------------------->
+                <div class="object-type" id="object-type">
+                    <div class="main-content-title">
+                        <a href="#"><h1>API / Типы объектов</h1></a>
+                        <h2>Сервис - Типы объектов</h2>
+                        <p>Предоставляет Список типов объектов и строений</p>
+                    </div>
+                    <hr>
+                    <div class="main-content-url">
+                        <h1>URL</h1>
+                        <p>https://api.post.kz/api/v1/types</p>
+                    </div>
+                    <hr>
+                    <div class="code" contenteditable="true">
+                        <code>
+                            <pre>
+            {
+                "total" : "100"
+                "data" : [
+                    {
+                        'id':'asdf',
+                        'nameRus':'asdf',
+                        'nameKaz':'asdf'
+                    },
+                    ....
+                    {
+                        'id':'asdf',
+                        'nameRus':'asdf',
+                        'nameKaz':'asdf'
+                    }
+                ]
+                            </pre>
+                        </code>
+                    </div>
+                </div>
+                <!------------------- OBJECT-SEARCH---------------------->
+                <div class="object-search" id="object-search">
+                    <div class="main-content-title">
+                        <h2>Сервис - Поиск объектов</h2>
+                        <p>Cписок объектов по родителю</p>
+                    </div>
+                    <hr>
+                    <div class="main-content-url">
+                        <h1>URL</h1>
+                        <p>https://api.post.kz/api/objects/{parent}?from={from}</p>
+                    </div>
+                    <hr>
+                    <div class="main-content-parameters">
+                        <p>Параметры</p>
+                        <div class="content-parameters-inner">
+                            <p class="parameters-inner">{parent}</p>
+                            <p> - Идентификатор родителя</p>
+                        </div>
+                        <div class="content-parameters-inner">
+                            <p class="parameters-inner">{from}</p>
+                            <p><br>- Начальная позиция для выдачи результатов, не более 100 результатов в ответе</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

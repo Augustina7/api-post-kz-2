@@ -22,32 +22,31 @@ Project: API.POST.KZ
 <body>
 
     <!------------------- HEADER ---------------------->
-
     <header>
         <div class="header">
-            <div class="header-column-1">
+            <div class="header-logo-link">
                 <a href="#">
                     <img src="img/logo.svg" alt="Логотип" />
                 </a>
             </div>
-            <div class="header-column-2">
+            <div class="header-rest">
                 <a href="#">REST</a>
             </div>
-            <div class="header-column-3">
+            <div class="header-menu">
                 <ul>
                     <li>
-                        <a href="#">API</a>
+                        <a href="#" class="menu-text">API</a>
                     </li>
                     <li>
-                        <a href="#" class="column-3-white-text">Документация</a>
+                        <a href="#" class="menu-white-text">Документация</a>
                     </li>
                 </ul>
             </div>
-            <div class="header-column-4">
+            <div class="header-user-name">
                 <img src="img/user_avatar.svg" alt="Иконка аватара пользователя" />
                 <p>User</p>
             </div>
-            <div class="header-column-5">
+            <div class="header-logout">
                 <a href="#">
                     <img src="img/sign-out.svg" alt="Иконка выхода">
                 </a>
@@ -56,13 +55,10 @@ Project: API.POST.KZ
     </header>
 
     <!------------------- PAGE ---------------------->
-
     <div class="page">
 
         <!------------------- ASIDE ---------------------->
-
-        <aside>
-            <div class="aside">
+        <aside class="aside">
                 <div class="aside-content">
                     <div class="aside-content-title">
                         <h1>API Сервисы</h1>
@@ -120,19 +116,19 @@ Project: API.POST.KZ
                         <p>Инструкция для новых почтовых индексов и адресных данных</p>
                     </div>
                 </div>
-            </div>
         </aside>
 
 
         <!------------------- SECTION MAIN ---------------------->
-
-
         <section class="main">
             <div class="main-content">
                 <!------------------- OBJECT-TYPE ---------------------->
                 <div class="object-type" id="object-type">
                     <div class="main-content-title">
-                        <a href="#"><h1>API / Типы объектов</h1></a>
+                        <a href="#">
+                            <h1 class="content-title-grey">API /</h1>
+                            <h1 class="content-title-white">Типы объектов</h1>
+                        </a>
                         <h2>Сервис - Типы объектов</h2>
                         <p>Предоставляет Список типов объектов и строений</p>
                     </div>
@@ -142,26 +138,26 @@ Project: API.POST.KZ
                         <p>https://api.post.kz/api/v1/types</p>
                     </div>
                     <hr>
-                    <div class="code" contenteditable="true">
-                        <code>
-                            <pre>
-            {
-                "total" : "100"
-                "data" : [
-                    {
-                        'id':'asdf',
-                        'nameRus':'asdf',
-                        'nameKaz':'asdf'
-                    },
-                    ....
-                    {
-                        'id':'asdf',
-                        'nameRus':'asdf',
-                        'nameKaz':'asdf'
-                    }
-                ]
-                            </pre>
-                        </code>
+                    <div class="code">
+                            <code>
+                                <pre>
+                {
+                    "total" : "100"
+                    "data" : [
+                        {
+                            'id':'asdf',
+                            'nameRus':'asdf',
+                            'nameKaz':'asdf'
+                        },
+                        ....
+                        {
+                            'id':'asdf',
+                            'nameRus':'asdf',
+                            'nameKaz':'asdf'
+                        }
+                    ]
+                                </pre>
+                            </code>
                     </div>
                 </div>
                 <!------------------- OBJECT-SEARCH---------------------->
@@ -183,7 +179,7 @@ Project: API.POST.KZ
                             <p> - Идентификатор родителя</p>
                         </div>
                         <div class="content-parameters-inner">
-                            <p class="parameters-inner">{from}</p>
+                            <p class="parameters-inner" style="padding-right: 40px;">{from}</p>
                             <p><br>- Начальная позиция для выдачи результатов, не более 100 результатов в ответе</p>
                         </div>
                     </div>
